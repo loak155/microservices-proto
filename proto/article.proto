@@ -18,7 +18,7 @@ message Article {
   int32 id = 1;
   string title = 2;
   string url = 3;
-  string bookmarkCount = 4;
+  int32 bookmarkCount = 4;
   google.protobuf.Timestamp created_at = 5;
   google.protobuf.Timestamp updated_at = 6;
 }
