@@ -4,6 +4,8 @@ package article;
 
 option go_package = "/pb";
 
+import "google/protobuf/timestamp.proto";
+
 service ArticleService {
   rpc CreateArticle(CreateArticleRequest) returns (CreateArticleResponse);
   rpc GetArticle(GetArticleRequest) returns (GetArticleResponse);
@@ -17,6 +19,8 @@ message Article {
   string title = 2;
   string url = 3;
   string bookmarkCount = 4;
+  google.protobuf.Timestamp created_at = 5;
+  google.protobuf.Timestamp updated_at = 6;
 }
 
 message CreateArticleRequest {
